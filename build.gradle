@@ -59,31 +59,13 @@ tasks.withType(Test) {
     }
 }
 
-// Задача для запуска тестов с тегом "smoke"
-tasks.register('smoke', Test) {
-    testLogging {
-        events "passed", "skipped", "failed", "standardOut", "standardError"
-        exceptionFormat "full"
-    }
-    useJUnitPlatform {
-        includeTags("smoke")
-    }
-}
 
-// Задача для запуска тестов с тегом "regress"
-tasks.register('regress', Test) {
-    testLogging {
-        events "passed", "skipped", "failed", "standardOut", "standardError"
-        exceptionFormat "full"
-    }
+tasks.register("Home_Bank" ,Test) {
     useJUnitPlatform {
-        includeTags("regress")
+        includeTags("Home_Bank")
     }
-}
 
-// Гредл задача с именем simple_test с типом Test (Будет выполнять только задачи типа).Включает только тесты c tag = sipmle
-task simple_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("simple")
+    test {
+        useJUnitPlatform()
     }
 }
