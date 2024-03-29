@@ -37,7 +37,7 @@ ___
 ## **Команды для запуска из терминала**
 ***Локальный запуск:***
 ```bash  
-gradle clean X5Group_test
+gradle clean Home_Bank_test
 ```
 
 ___
