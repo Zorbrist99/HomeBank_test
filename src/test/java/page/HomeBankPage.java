@@ -12,7 +12,7 @@ public class HomeBankPage {
 
 
     public void openPage() {
-        open("https://home.bank");
+        open("https://home.bank/");
     }
 
     public void searchTextCredit() {
